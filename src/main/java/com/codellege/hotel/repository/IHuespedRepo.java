@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IHuespedRepo extends JpaRepository<Huesped, Integer >{
-    void deleteById(Integer idHuesped);
+    //void deleteById(Integer idHuesped);
 }
