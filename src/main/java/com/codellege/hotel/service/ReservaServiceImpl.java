@@ -21,6 +21,7 @@ public class ReservaServiceImpl implements IReservaService<Reserva, Integer> {
         return repository.save(reserva);
     }
 
+    @Override
     public Reserva save(Integer idReserva, Reserva reserva) {
         reserva.setIdReserva(idReserva);
         return repository.save(reserva);
