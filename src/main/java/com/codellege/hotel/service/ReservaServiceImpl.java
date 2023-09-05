@@ -4,9 +4,10 @@ import com.codellege.hotel.model.Huesped;
 import com.codellege.hotel.model.Reserva;
 import com.codellege.hotel.repository.IHuespedRepo;
 import com.codellege.hotel.repository.IReservaRepo;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ReservaServiceImpl implements IReservaService<Reserva, Integer> {
     private IReservaRepo repository;
 
@@ -20,6 +21,7 @@ public class ReservaServiceImpl implements IReservaService<Reserva, Integer> {
         return repository.save(reserva);
     }
 
+    @Override
     public Reserva save(Integer idReserva, Reserva reserva) {
         reserva.setIdReserva(idReserva);
         return repository.save(reserva);
